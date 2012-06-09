@@ -1,0 +1,5 @@
+Q = Environment()
+Q.VariantDir( "obj", "src", duplicate = 0 )
+sources = Glob("obj/*.cpp")
+obj_list = Q.Object( source = sources )
+Q.Program ( target = "bin/QTest", source = obj_list )
